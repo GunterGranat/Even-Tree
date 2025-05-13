@@ -1,31 +1,43 @@
-# Even-Tree
-You are given a tree (a simple connected graph with no cycles).
+# Compare two linked list
+You’re given the pointer to the head nodes of two linked lists. Compare the data in the nodes of the linked lists to check if they are equal. If all data attributes are equal and the lists are the same length, return . Otherwise, return .
 
-Find the maximum number of edges you can remove from the tree to get a forest such that each connected component of the forest contains an even number of nodes.
+Example
 
-As an example, the following tree with  nodes can be cut at most  time to create an even forest.
+llist1 = 1-> 2-> 3-> NULL
 
-image
+The two lists have equal data attributes for the first  nodes.  is longer, though, so the lists are not equal. Return .
 
 Function Description
 
-Complete the evenForest function in the editor below. It should return an integer as described.
+Complete the compare_lists function in the editor below.
 
-evenForest has the following parameter(s):
+compare_lists has the following parameters:
 
-t_nodes: the number of nodes in the tree
-t_edges: the number of undirected edges in the tree
-t_from: start nodes for each edge
-t_to: end nodes for each edge, (Match by index to t_from.)
+SinglyLinkedListNode llist1: a reference to the head of a list
+SinglyLinkedListNode llist2: a reference to the head of a list
+Returns
+
+int: return 1 if the lists are equal, or 0 otherwise
 Input Format
 
-The first line of input contains two integers  and , the number of nodes and edges.
-The next  lines contain two integers  and  which specify nodes connected by an edge of the tree. The root of the tree is node .
+The first line contains an integer , the number of test cases.
+
+Each of the test cases has the following format:
+The first line contains an integer , the number of nodes in the first linked list.
+Each of the next  lines contains an integer, each a value for a data attribute.
+The next line contains an integer , the number of nodes in the second linked list.
+Each of the next  lines contains an integer, each a value for a data attribute.
 
 Constraints
 
-Note: The tree in the input will be such that it can always be decomposed into components containing an even number of nodes.  is the set of positive even integers.
+1 <= t <= 10
+1 <= n,m <= 1000
+1 <= llist1[i], llist2[i] <= 1000
 
 Output Format
 
-Print the number of removed edges.
+Compare the two linked lists and return 1 if the lists are equal. Otherwise, return 0. Do NOT print anything to stdout/console.
+
+The output is handled by the code in the editor and it is as follows:
+
+For each test case, in a new line, print  if the two lists are equal, else print 0.
